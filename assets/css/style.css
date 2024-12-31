@@ -179,7 +179,6 @@ header .navbar ul li a:hover {
 /* hamburger icon ends */
 
 /* hero section starts*/
-/* General Hero Section Styles */
 .home {
   position: relative;
   display: flex;
@@ -187,67 +186,105 @@ header .navbar ul li a:hover {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
-  justify-content: center; /* Center content on mobile */
-  text-align: center; /* Center-align text */
 }
 .home #particles-js {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
+  top:0;
   left: 0;
 }
 .home::before {
   content: "";
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
 }
+/* Default for desktop */
 .home .content {
-  flex: 1 1 auto;
+  flex: 1 1 40rem;
   padding-top: 1rem;
   z-index: 1;
 }
-.home .image {
-  flex: 1 1 auto;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.home .image img {
-  max-width: 100%;
-  height: auto;
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .home .content {
+    flex: 1 1 30rem; /* Reduce width slightly */
+    padding-top: 2rem; /* Add more space for better readability */
+    text-align: center; /* Center-align the content for tablets */
+  }
 }
 
-/* Hero Section Typography */
+/* Small screens (mobile) */
+@media (max-width: 450px) {
+  .home .content {
+    flex: 1 1 100%; /* Full-width for mobile */
+    padding-top: 2rem; /* Add consistent spacing */
+    text-align: center; /* Center-align the content */
+  }
+
+  /* Adjust inner elements for readability */
+  .home .content h2 {
+    font-size: 3.5rem; /* Smaller heading for mobile */
+  }
+
+  .home .content p {
+    font-size: 2rem; /* Adjust paragraph size */
+  }
+
+  .home .btn {
+    padding: 1.4rem 2.5rem; /* Smaller button */
+    font-size: 1.5rem;
+  }
+}
+
+.home .image {
+  flex: 1 1 40rem; /* Default size for desktop */
+  z-index: 1;
+}
+
+@media (max-width: 768px) { /* Target tablets and smaller devices */
+  .home .image {
+    flex: 1 1 30rem; /* Reduce image size on medium screens */
+  }
+}
+
+@media (max-width: 450px) { /* Target mobile devices */
+  .home .image {
+    flex: 1 1 20rem; /* Further reduce image size on small screens */
+  }
+}
+
+
+
 .home .content h2 {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 800;
   color: #002057;
 }
 .home .content h2 span {
-  font-size: 3.5rem;
+  font-size: 5rem;
   font-weight: 800;
   color: #ff7b00;
 }
 .home .content p {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #000;
   font-weight: 600;
   padding: 1rem 0;
 }
 .home .content p span {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: rgb(204, 9, 9);
   font-weight: 600;
+  padding: 1rem 0;
 }
-
-/* Hero Button */
 .home .btn {
   margin-top: 1rem;
+  position: absolute;
   line-height: 0;
   padding: 1.6rem 3rem;
   border-radius: 4em;
@@ -273,23 +310,19 @@ header .navbar ul li a:hover {
 .home .btn:hover i {
   transform: translateX(5px);
 }
-
-/* Social Icons */
+/* social icons start */
 .socials {
   position: relative;
-  margin-top: 4rem;
-  display: flex;
-  justify-content: center;
+  margin-top: 9rem;
 }
 .socials .social-icons {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  display: flex;
-  gap: 10px; /* Add spacing between icons */
 }
 .socials .social-icons li {
   display: inline-block;
+  margin-bottom: 14px;
 }
 .social-icons a {
   font-size: 2rem;
@@ -300,16 +333,18 @@ header .navbar ul li a:hover {
   width: 44px;
   height: 44px;
   text-align: center;
-  margin-right: 0;
+  margin-right: 8px;
   border-radius: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
+.social-icons a:active,
+.social-icons a:focus,
 .social-icons a:hover {
   color: #fff;
   background-color: #0685da;
 }
-
-/* Social Icon Colors */
 .social-icons a.github:hover {
   background-color: #0e0e0e;
 }
@@ -328,67 +363,26 @@ header .navbar ul li a:hover {
 .social-icons a.facebook:hover {
   background: #32506d;
 }
+/* social icons end */
 
-/* Mobile Media Queries */
-@media (max-width: 768px) {
-  .home {
-    flex-direction: column; /* Stack elements vertically */
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-  .home .content h2 {
-    font-size: 3rem;
-  }
-  .home .content h2 span {
-    font-size: 3rem;
-  }
-  .home .content p {
-    font-size: 1.8rem;
-  }
-  .home .content p span {
-    font-size: 1.8rem;
-  }
+/* hero media queries starts*/
+@media (max-width: 450px) {
   .home .btn {
-    padding: 1.2rem 2.5rem;
+    margin: 4rem 0;
   }
   .socials {
-    margin-top: 3rem;
+    margin-top: 12rem;
   }
-  .social-icons a {
-    font-size: 1.8rem;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-  }
-}
-
-@media (max-width: 450px) {
-  .home {
-    padding: 1rem;
-  }
-  .home .content h2 {
-    font-size: 2.5rem;
-  }
-  .home .content h2 span {
-    font-size: 2.5rem;
+  .home .image img {
+    margin-top: 1rem;
   }
   .home .content p {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
   }
   .home .content p span {
-    font-size: 1.6rem;
-  }
-  .home .btn {
-    padding: 1rem 2rem;
-  }
-  .social-icons a {
-    font-size: 1.5rem;
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
+    font-size: 2.2rem;
   }
 }
-
 /* hero media queries ends*/
 /* hero section end */
 
