@@ -218,6 +218,7 @@ header .navbar ul li a:hover {
   }
 }
 
+
 /* Small screens (mobile) */
 @media (max-width: 450px) {
   .home .content {
@@ -246,15 +247,15 @@ header .navbar ul li a:hover {
   z-index: 1;
 }
 
-@media (max-width: 768px) { /* Target tablets and smaller devices */
-  .home .image {
-    flex: 1 1 30rem; /* Reduce image size on medium screens */
-  }
-}
 
-@media (max-width: 450px) { /* Target mobile devices */
+@media screen and (max-width: 600px) {
   .home .image {
-    flex: 1 1 20rem; /* Further reduce image size on small screens */
+    margin-top: 2rem;
+  }
+  .home .image img {
+    margin: 0 auto;
+    width: 80%;
+    mix-blend-mode: normal;
   }
 }
 
