@@ -224,7 +224,13 @@ header .navbar ul li a:hover {
   .home .content {
     flex: 1 1 100%; /* Full-width for mobile */
     padding-top: 2rem; /* Add consistent spacing */
-    text-align: center; /* Center-align the content */
+    text-align: flex; /* Center-align the content */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
   }
 
   /* Adjust inner elements for readability */
