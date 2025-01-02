@@ -259,6 +259,56 @@ header .navbar ul li a:hover {
   }
 }
 
+/* Default behavior: Image is visible */
+.image {
+  display: block;
+}
+
+/* Hide the image on mobile devices (screen width less than or equal to 768px) */
+@media screen and (max-width: 768px) {
+  .home .image {
+      display: none;
+  }
+  .home .content {
+    position: relative;
+        top: -50px;
+  }
+  #home {
+    padding: 20px;
+}
+
+/* Ensure all elements stack vertically */
+#home .content {
+    margin: 3 auto;
+    
+}
+#home .content p {
+  font-size: 2rem; /* Slightly smaller font for mobile */
+  text-align: left; /* Ensure left alignment */
+}
+
+#home .btn {
+    margin: 30px 0; /* Center button vertically */
+    position: relative;
+    top: 38; /* Reset any previous positioning */
+    
+    
+}
+
+#home .socials {
+    margin-top: 50px;
+}
+
+/* Align the text, button, and socials */
+#home .content, #home .btn, #home .socials {
+    align-self:normal;
+}
+#home .content h2 {
+   /* Slightly smaller font size for mobile */
+  line-height: 1.5; /* Adjust spacing for readability */
+  text-align: left; /* Ensure left alignment */
+}
+}
 
 
 .home .content h2 {
@@ -496,6 +546,7 @@ header .navbar ul li a:hover {
   .about .row .content .box-container {
     gap: 0;
   }
+  
 }
 /* about media queries ends*/
 /* about section ends */
