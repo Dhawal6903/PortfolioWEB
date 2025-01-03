@@ -53,7 +53,7 @@
           <li><a class="twitter" aria-label="twitter" href="https://x.com/DHAWAL9999?t=1l-483YYRPsl4p9BHceM_A&s=09</div>
             " target="_blank"><i class="fab fa-twitter"></i></a></li> 
           <li><a class="github" aria-label="GitHub" href="https://github.com/Dhawal6903" target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a class="facebook" aria-label="Facebook" href="https://www.facebook.com/people/Code-With-Tanveer/100090088137923/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+          <li><a class="facebook" aria-label="Facebook" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
           <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/dhawal_sakharwade/"><i class="fab fa-instagram" target="_blank"></i></a></li>
           </ul>
       </div>
@@ -71,9 +71,29 @@
     
     <div class="row">
 
-    <div class="image">
-        <img draggable="false" class="tilt" src="./assets/images/home-main.svg" alt="">
-    </div>
+      <div class="image">
+        <img src="./assets/images/home-main.svg" alt="Default Image" class="responsive-image">
+      </div>
+      
+      <script>
+        const imgElement = document.querySelector('.responsive-image');
+      
+        function updateImageSource() {
+          const screenWidth = window.innerWidth;
+          if (screenWidth <= 600) {
+            imgElement.src = './assets/images/photo1.png'; // PNG for smaller screens
+          } else {
+            imgElement.src = './assets/images/home-main.svg'; // SVG for larger screens
+          }
+        }
+      
+        // Run on page load
+        updateImageSource();
+      
+        // Update on window resize
+        window.addEventListener('resize', updateImageSource);
+      </script>
+      
     <div class="content">
         <h3>I'm Dhawal Sakharwade</h3>
         <span class="tag">Software Developer</span>
@@ -110,6 +130,7 @@
     </div>
 </section>
 <!-- about section ends -->
+ 
 
 <!-- skills section starts -->
 <section class="skills" id="skills">
@@ -485,9 +506,8 @@
             <a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/dhawal-sakharwade-18362822a/" target="_blank"><i class="fab fa-linkedin"></i></a> 
             <a class="github" aria-label="GitHub" href="https://github.com/Dhawal6903" target="_blank"><i class="fab fa-github"></i></a>
             <a class="twitter" aria-label="twitter" href="https://x.com/DHAWAL9999?t=1l-483YYRPsl4p9BHceM_A&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a class="instagram" aria-label="Instagram" href="https://www.instagram.com/Dhawal/"><i class="fab fa-instagram" target="_blank"></i></a>
-            <a class="dev" aria-label="Dev" href="https://www.youtube.com/channel/UCUHWQr2ACeR2lSMXABALxHw" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-          </div>
+            <a class="instagram" aria-label="Instagram" href="https://www.instagram.com/dhawal_sakharwade/"><i class="fab fa-instagram" target="_blank"></i></a>
+            </div>
       </div>
   </div>
 
