@@ -267,8 +267,8 @@ header .navbar ul li a:hover {
 /* Hide the image on mobile devices (screen width less than or equal to 768px) */
 @media screen and (max-width: 768px) {
   .home .image {
-      display: none;
-  }
+    display: none;
+}
   .home .content {
     position: relative;
         top: -50px;
@@ -531,11 +531,15 @@ header .navbar ul li a:hover {
   .about .row .image {
     margin-top: 2rem;
   }
+    
   .about .row .image img {
-    margin: 0 auto;
-    width: 80%;
-    mix-blend-mode: normal;
-  }
+       /* Replace image for mobile */
+      margin: 0 auto;
+      width: 80%;
+      mix-blend-mode: normal;
+      height: 300px;
+    }
+  
   .about .row {
     padding: 0.5rem;
     margin-bottom: 7rem;
