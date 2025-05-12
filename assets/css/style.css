@@ -1362,4 +1362,31 @@ form .button-area {
     margin-bottom: 15px;
 }
 
+.image {
+  position: relative;
+  width: max-content;
+  display: inline-block;
+}
+
+/* Splash (background) image */
+.splash-bg {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  width: 520px; /* You can tweak this */
+  height: 820px;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Profile image */
+.tilt {
+  position: relative;
+  height: auto;
+  max-height: 600px; /* You can match this to the original pro.png height */
+  z-index: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
